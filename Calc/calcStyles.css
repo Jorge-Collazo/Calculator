@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Ibarra+Real+Nova&display=swap');
+
+body{
+    background: white;
+    background: linear-gradient(rgb(0, 0, 0), rgb(12, 12, 12), rgb(83, 83, 83), rgb(145, 145, 145), rgb(228, 227, 227) ) ;
+    font-size: 20px;
+    font-family: 'Ibarra Real Nova', serif;
+}
+html{
+    height: 115%;
+}
+
+/* header */
+
+.header{
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(255, 255, 255);
+    border: rgb(0, 0, 0) solid 5px;
+    padding: 5px 0px;
+    margin: 10px 0px;
+}
+
+h1{
+    margin: 10px 0px;
+    font-size: 40px;
+}
+
+/* calculator container */
+
+#calculator{
+    width:419px;
+    height: auto;
+    margin: 30px auto;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 65, 90, 0.781);
+    padding-top: 20px;
+}
+
+/* display, clear and delete buttons */
+
+#display{
+    border: solid 4px rgba(92, 92, 92, 0.247);
+    height: 45px;
+    padding: 5px;
+    text-align: right;
+    float: none;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.589);
+    border-radius: 7px;
+}
+
+#clear, #delete, #sClear{
+    height: 50px;
+    border-radius: 5px;
+    background-color: rgb(122, 122, 122);
+    text-align: center;
+    margin: 20px 16px 0px 0px;
+    color: rgb(10, 10, 10);
+}
+#clear:hover, #delete:hover, #sClear:hover{
+    background-color: white;
+    color: black;
+    font-size: 33px;
+    transition: all 1s;
+}
+
+#clearDelete{
+    width: 100%;
+}
+
+/* number rows */
+
+button{
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    border-radius: 40px;
+    background-color: rgb(24, 24, 24);
+    color: white;
+    font-size: 35px;
+}
+
+button:hover{
+    background-color: white;
+    color: rgb(24, 24, 24);
+    transition: all .8s;
+}
+
+.operator{
+    background-color: rgb(122, 122, 122);
+    color: white;
+}
+
+.operator:hover{
+    background-color: white;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    transition: all .8s;
+}
+
+#equal{
+    background-color: rgb(255, 255, 255);
+    color: rgb(22, 22, 22);
+}
+
+#equal:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(22, 22, 22);
+    font-size: 30px;
+}
