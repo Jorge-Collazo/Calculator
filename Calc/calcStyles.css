@@ -7,7 +7,7 @@ body{
     font-family: 'Ibarra Real Nova', serif;
 }
 html{
-    height: 115%;
+    height: 105%;
 }
 
 /* header */
@@ -33,22 +33,26 @@ h1{
     height: auto;
     margin: 30px auto;
     padding: 10px;
-    border-radius: 10px;
-    background-color: rgba(0, 65, 90, 0.781);
+    border: double 18px rgba(39, 39, 39, 0.719);
+    border-radius: 20px;
     padding-top: 20px;
+    /*background: radial-gradient(rgb(0, 140, 255), rgb(0, 91, 133), rgb(0, 35, 82), rgb(1, 13, 46));*/
+    animation: blip 0.5s infinite;
 }
 
 /* display, clear and delete buttons */
 
 #display{
-    border: solid 4px rgba(92, 92, 92, 0.247);
+    border: solid 4px rgba(17, 17, 17, 0.247);
     height: 45px;
     padding: 5px;
     text-align: right;
     float: none;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.589);
+    /*background-color: rgba(156, 156, 156, 0.589);*/
+    animation: blip 1s infinite;
     border-radius: 7px;
+    font-size: 30px;
 }
 
 #clear, #delete, #sClear{
@@ -83,8 +87,9 @@ button{
 }
 
 button:hover{
-    background-color: white;
-    color: rgb(24, 24, 24);
+    /*background-color: white;
+    color: rgb(24, 24, 24);*/
+    animation: blip 1s infinite;
     transition: all .8s;
 }
 
@@ -109,4 +114,25 @@ button:hover{
     color: rgb(255, 255, 255);
     background-color: rgb(22, 22, 22);
     font-size: 30px;
+}
+
+/* squared and fraction buttons */
+
+#squared, #squareRoot, #fraction{
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+    margin: auto;
+}
+@keyframes blip{
+    15%{color: red; background-color: purple;}
+    30%{color: orange; background-color: blue;}
+    45%{color: yellow; background-color: green;}
+    60%{color: green; background-color: yellow;}
+    75%{color: blue; background-color: orange;}
+    90%{color: purple; background-color: red;}
+  }
+
+@keyframes why{
+    
 }

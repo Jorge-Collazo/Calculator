@@ -23,13 +23,13 @@
         <!--CLEAR AND DELETE BUTTONS-->
         <div class="row">
             <div class="col-1-1" id="clearDelete">
+                <button class="sClearButton" id="sClear"onclick="clearSection()" >CE</button>
                 <button class="deleteButton" id="delete" onclick="backspace()">DEL</button>
                 <button class="clearButton" id="clear" onclick="clearButton()">CLR</button>
-                <button class="sClearButton" id="sClear">CE</button>
-                <br>
-                <button class="squareButton" id="Squared">x^2</button>
-                <button class="squareRootButton" id="SquareRoot">√x</button>
-                <button class="fractionButton" id="Squared">1/x</button>
+
+                <button class="squareButton" id="squared" onclick="square()">x^2</button>
+                <button class="squareRootButton" id="squareRoot" onclick="squareRoot()">√x</button>
+                <button class="fractionButton" id="fraction" onclick="fraction()">1/x</button>
             </div>
         </div>
 
@@ -52,7 +52,7 @@
         </div>
         <div class="row">
             <div class="col-1-1">
-                <button class="num-button" on-click="setValue(1)">1</button>
+                <button class="num-button" onclick="setValue(1)">1</button>
                 <button class="num-button" onclick="setValue(2)">2</button>
                 <button class="num-button" onclick="setValue(3)">3</button>
                 <button class="operator" onclick="setOperators(2)">-</button>

@@ -26,7 +26,7 @@ function setValue(number){
 
     else{
         num2 += number;
-        display.innerHTML += number
+        display.innerHTML += number;
     }
 
     //stops overflow of numbers onto the screen
@@ -59,6 +59,7 @@ function setOperators(number){
     //only allows for one operator at a time
     if(flag === true){
         display.innerHTML = num1 + opString;
+        num2 = "";
     }
 
     //if we pressed an operator and there is no num1, clear everything
@@ -104,7 +105,7 @@ function equalClick(){
 
     if(roundedResult === "Infinity"){
         display.innerHTML = "You can't divide by zero"
-        alert("🤡")
+        alert("Don't do that")
     }
     if(roundedResult === "NaN"){
         display.innerHTML = "Invalid calculation"
@@ -135,7 +136,7 @@ function backspace(){
         temp2 = num2.substring(0, num2.length-1);
         num2 = temp2;
         flag = true;
-        display.innerHTML = num1 + opString + num2
+        display.innerHTML = num1 + opString + num2;
     }
 }
 
@@ -163,10 +164,40 @@ function setDecimal(){
     }
 }
 
-function square(){
+function clearSection(){
+    if(flag === true){
+        num2 = "";
+        display.innerHTML = num1 + opString;
+    }
+}
 
+function square(){
+    if(equalTo === true){
+        clearButton();
+    }
+    if(flag === false){
+        num1 = Math.pow(num1,2);
+        display.innerHTML = num1;
+        equalTo = true;
+    }
 }
 function squareRoot(){
-
+    if(equalTo === true){
+        clearButton();
+    }
+    if(flag === false){
+        num1 = Math.sqrt(num1);
+        display.innerHTML = num1;
+        equalTo = true;
+    }
 }
-function 
+function fraction(){
+    if(equalTo === true){
+        clearButton();
+    }
+    if(flag === false){
+        num1 = 1/num1;
+        display.innerHTML = num1;
+        equalTo = true;
+    }
+}
